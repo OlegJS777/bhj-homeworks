@@ -10,8 +10,8 @@ const add = (i) => {
     sliderItem[i].classList.add('slider__item_active');
 }
 
-sliderNext .onclick = () => {
-    const showItem = sliderItem.findIndex(el => el.classList.contains('slider__item_active'))
+sliderNext.onclick = () => {
+    let showItem = sliderItem.findIndex(el => el.classList.contains('slider__item_active'))
     if (showItem == sliderItem.length - 1) {
         showItem = -1;
     }
@@ -20,10 +20,12 @@ sliderNext .onclick = () => {
 }
 
 sliderPrev.onclick = () => {
-    const showItem = sliderItem.findIndex(el => el.classList.contains('slider__item_active'))
+    let showItem = sliderItem.findIndex(el => el.classList.contains('slider__item_active'))
     if (showItem <= 0) {
         showItem = sliderItem.length;
     }
     remove();
     add(showItem - 1);
 }
+
+
