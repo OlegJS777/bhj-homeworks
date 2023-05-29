@@ -25,7 +25,7 @@ let deletetasksAdd = document.querySelector(".task__remove");
 }
 
 tasksAdd.onclick = addTask;
-    input.addEventListener("keydown", (item) => {
+    input.addEventListener((item) => {
         if(item.code == "Enter") {
             addTask();
   }
