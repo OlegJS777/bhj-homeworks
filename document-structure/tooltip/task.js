@@ -6,6 +6,9 @@ hasTooltips.forEach(element => {
     element.addEventListener('click', (e) => {
         e.preventDefault();
         let tooltips = element.nextSibling;
+        let positionTooltip = element.getBoundingClientRect();
+        tooltips.style.left = positionTooltip.left + 'px';
+        tooltips.style.top = positionTooltip.bottom + 'px';
         tooltips.classList.toggle('tooltip_active');
     });
 });
