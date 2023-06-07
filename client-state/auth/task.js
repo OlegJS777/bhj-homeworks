@@ -3,7 +3,7 @@ let useId = document.getElementById("user_id");
 let welcome = document.getElementById("welcome");
 
 signinForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+e.preventDefault();
 
   let form = new FormData(signinForm);
   let xhr = new XMLHttpRequest();
