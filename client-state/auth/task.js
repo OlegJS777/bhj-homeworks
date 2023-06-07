@@ -24,16 +24,14 @@ signinForm.addEventListener("submit", (e) => {
   };
   signinForm.reset();
 });
-window.onload = function () {
-  let useId = localStorage.getItem("id");
-
-  if (useId) {
-    useId.textContent = useId;
-    welcomeUser();
+window.onload = () => {
+  if (localStorage.user_id != undefined) {
+    logIn();
   }
-};
+}
 
 function welcomeUser() {
     signinForm.classList.add("welcome");
   welcome.classList.add("welcome_active");
 }
+
